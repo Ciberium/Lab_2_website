@@ -55,3 +55,22 @@ body {
 .title_photo {
     text-align: center;
 }
+
+.button_js {
+    text-align: center;
+}
+
+#demo img {
+    margin-top: 20px;
+    width: 50%;
+}
+
+#myButton {
+    border: none;
+    border-radius: 15px;
+    width: 150px;
+    height: 50px;
+    background-color: brown;
+    color: aliceblue;
+    font-weight: bold;
+}
