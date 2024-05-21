@@ -38,6 +38,47 @@
             </div>
         </div>
     </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="hello">
+                    Привет, <?php echo $_COOKIE['User']; ?>
+                </h1>
+            </div>
+            <div class="col-12">
+                <form method= "POST" action="profile.php">
+                    <input type="text" class="form" type="text" name="title" placeholder="Заголовок Вашего поста!">
+                    <textarea name="text" cols="30" rows="10" placeholder="Введите текст Вашего поста ..."></textarea>
+                    <button type="submit" class="btn_red" name="submit">Сохранить пост!</button>
+                </form>
+            </div>
+        </div>
+    </div>
     <script type="text/javascript" src="js/button.js"></script>
 </body>
 </html>
+
+
+<?php
+
+require_once('db.php');
+
+
+$link = mysqli_connect('127.0.0.1', 'root', 'kali', 'first');
+
+
+if (isset($_POST['submit'])) {
+    $title = $_POST['title'];
+    $main_text = $_POST['text'];
+
+    if (!$title || !$main_text) die ('Пожалуйста введите все значения!');
+
+    $sql = "INSERT INTO posts (title, main_text) VALUES ('$title', '$main_text')";
+
+    if (!mysqli_query($link, $sql)) die ("Не удалось добавить пост");
+
+
+}
+
+
+?>

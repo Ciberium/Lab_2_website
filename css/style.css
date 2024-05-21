@@ -4,6 +4,7 @@ body {
     color: aliceblue;
 }
 
+
 .my_photo {
     background: url(../image/my_photo.jpg) no-repeat center center;
     background-size: 100%;
@@ -74,3 +75,21 @@ body {
     color: aliceblue;
     font-weight: bold;
 }
+
+  
+  .btn_red {
+    border: none;
+    border-radius: 15px;
+    width: 150px;
+    height: 50px;
+    background-color: brown;
+    color: azure;
+    font-weight: bold;
+  }
+  
+  .form_reg {
+    margin: auto;
+    padding-top: 10px;
+  }
+
+  
